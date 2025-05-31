@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+body {
+    font-family: "Inter", sans-serif;
+    @apply bg-gray-800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Outfit", sans-serif;
+}
+
+.container {
+    @apply 2xl:max-w-[1320px] xl:max-w-[1200px] lg:max-w-[992px] md:max-w-[768px] sm:max-w-[576px] max-w-[375px];
+}
