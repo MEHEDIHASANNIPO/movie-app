@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export const useMovieStore = defineStore('movie', {
   state: () => ({
-    apiKey: 'OMDB_API_KEY',
+    apiKey: import.meta.env.VITE_API_KEY,
     search: null,
     type: 'movie',
     pages: 1,

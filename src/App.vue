@@ -50,7 +50,7 @@ onMounted(() => {
     <!-- Header End -->
 
     <RouterView v-slot="{ Component, route }">
-        <transition name="route" type="out-in">
+        <transition name="route" mode="out-in">
             <div :key="route.name">
                 <component :is="Component" />
             </div>
@@ -73,7 +73,7 @@ onMounted(() => {
     }
 
     .route-enter-active, .route-leave-active {
-        transition: all ease-out 0.2s;
+        transition: all 0.3s ease-out;
     }
 
     .route-leave-to {
