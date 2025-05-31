@@ -38,11 +38,11 @@ onMounted(() => {
                 </div>
 
                 <ul class="max-sm:absolute max-sm:inset-x-0 max-sm:bg-gray-900 max-sm:items-start max-sm:p-5 max-sm:z-10 flex flex-col md:flex-row items-center justify-end gap-5" :class="!showMenu ? 'max-sm:-top-[500%]' : 'max-sm:top-[100%]'">
-                    <li><router-link :to="{ name: 'home' }" class="text-rose-500 text-lg font-medium transition ease-in duration-300 hover:text-white">Home</router-link></li>
-                    <li><router-link :to="{ name: 'about' }" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">About</router-link></li>
-                    <li><a href="" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">Contact</a></li>
-                    <li><router-link :to="{ name: 'privacy' }" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">Privacy Policy</router-link></li>
-                    <li><a href="" class="block py-1.5 px-5 rounded-full bg-rose-500 text-white text-base font-medium transition ease-in duration-300 hover:bg-white hover:text-rose-500">Donate</a></li>
+                    <li><router-link @click="showMenu = false" :to="{ name: 'home' }" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">Home</router-link></li>
+                    <li><router-link @click="showMenu = false" :to="{ name: 'about' }" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">About</router-link></li>
+                    <li><router-link @click="showMenu = false" :to="{ name: 'contact' }" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">Contact</router-link></li>
+                    <li><router-link @click="showMenu = false" :to="{ name: 'privacy' }" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">Privacy Policy</router-link></li>
+                    <li><a href="javascript:void(0)" class="block py-1.5 px-5 rounded-full bg-rose-500 text-white text-base font-medium transition ease-in duration-300 hover:bg-white hover:text-rose-500">Donate</a></li>
                 </ul>
             </div>
         </div>
