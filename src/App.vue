@@ -41,7 +41,7 @@ onMounted(() => {
                     <li><router-link :to="{ name: 'home' }" class="text-rose-500 text-lg font-medium transition ease-in duration-300 hover:text-white">Home</router-link></li>
                     <li><router-link :to="{ name: 'about' }" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">About</router-link></li>
                     <li><a href="" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">Contact</a></li>
-                    <li><a href="" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">Privacy Policy</a></li>
+                    <li><router-link :to="{ name: 'privacy' }" class="text-white text-lg font-medium transition ease-in duration-300 hover:text-rose-500">Privacy Policy</router-link></li>
                     <li><a href="" class="block py-1.5 px-5 rounded-full bg-rose-500 text-white text-base font-medium transition ease-in duration-300 hover:bg-white hover:text-rose-500">Donate</a></li>
                 </ul>
             </div>
