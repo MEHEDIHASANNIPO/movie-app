@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export const useMovieStore = defineStore('movie', {
   state: () => ({
-    apiKey: 'e2037866',
+    apiKey: 'OMDB_API_KEY',
     search: null,
     type: 'movie',
     pages: 1,

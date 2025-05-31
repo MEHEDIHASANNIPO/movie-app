@@ -24,7 +24,7 @@ onMounted(() => {
 
       <!-- Search -->
       <div class="max-w-xl mx-auto mt-10 md:mt-16">
-        <form @submit.prevent="movieStore.searchMovies" class="flex flex-col md:flex-row items-center gap-0.5">
+        <form @submit.prevent="movieStore.searchMovies" class="flex flex-col md:flex-row items-center gap-2 md:gap-0.5">
             <div class="w-full md:w-4/5 relative">
               <select v-model="movieStore.type" class="absolute inset-y-0.5 bg-gray-800 text-gray-300 px-4 rounded-l-lg cursor-pointer focus:outline-0">
                 <option value="movie">Movie</option>
