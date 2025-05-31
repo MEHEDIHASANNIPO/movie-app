@@ -62,7 +62,7 @@ export const useMovieStore = defineStore('movie', {
     async getMovie(imdbid) {
         const { data } = await axios.get(`${this.baseUrl}&i=${imdbid}&plot=full`);
 
-        this.movie = data;
+        this.singleMovie = data;
     }
   },
 })
