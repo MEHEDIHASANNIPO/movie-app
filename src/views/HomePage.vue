@@ -45,14 +45,11 @@ onMounted(() => {
   <!-- Movie Start -->
   <section class="py-20 md:py-24">
     <div class="container mx-auto px-2">
-
-      <template v-if="movieStore.getMovies.length">
+      <template v-if="movieStore.response == 'True'">
 
           <!-- Search Analytics -->
           <div class="">
-            <h4 class="text-gray-300">Total Result: <span class="text-rose-500">{{ movieStore.getMovieCount ?? 0 }}</span></h4>
-
-            <h2 v-if="!movieStore.getMovieCount" class="text-center text-2xl text-white font-semibold mt-10">No result found!</h2>
+            <h4 class="text-gray-300">Total Result: <span class="text-rose-500">{{ movieStore.getMovieCount }}</span></h4>
           </div>
 
           <!-- Search Result -->
@@ -89,6 +86,15 @@ onMounted(() => {
               active-color = #ff2056
               @update:modelValue= movieStore.searchMovies
             />
+          </div>
+      </template>
+
+      <!-- No Movie Found -->
+      <template v-else-if="movieStore.response == 'False'">
+          <div class="">
+            <h4 class="text-gray-300">Total Result: <span class="text-rose-500">{{ movieStore.getMovieCount ?? 0 }}</span></h4>
+
+            <h2 v-if="!movieStore.getMovieCount" class="text-center text-2xl text-white font-semibold mt-10">No result found!</h2>
           </div>
       </template>
 

@@ -77,8 +77,8 @@ onMounted(() => {
                     </template>
 
                     <div class="sticky xl:absolute inset-x-0 bottom-0 mt-5 bg-gray-900 py-3 px-5 rounded-md">
-                        <h4 class="text-gray-200 text-base font-semibold"><span class="text-base font-medium text-green-500 mr-1">Source</span> {{ movieStore.singleMovie?.Ratings[0].Source }} </h4>
-                        <h4 class="text-gray-200 text-base font-semibold"><span class="text-base font-medium text-rose-500 mr-1">Value</span> {{ movieStore.singleMovie?.Ratings[0].Value }} </h4>
+                        <h4 class="text-gray-200 text-base font-semibold"><span class="text-base font-medium text-green-500 mr-1">Source</span> {{ movieStore.singleMovie?.Ratings[0]?.Source }} </h4>
+                        <h4 class="text-gray-200 text-base font-semibold"><span class="text-base font-medium text-rose-500 mr-1">Value</span> {{ movieStore.singleMovie?.Ratings[0]?.Value }} </h4>
                     </div>
                 </div>
             </div>

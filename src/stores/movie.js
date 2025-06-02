@@ -11,6 +11,7 @@ export const useMovieStore = defineStore('movie', {
     getMovies: [],
     singleMovie: null,
     movieCount: 0,
+    response: null,
 
     movies: [],
     series: [],
@@ -52,10 +53,11 @@ export const useMovieStore = defineStore('movie', {
 
     async searchMovies() {
         if(this.search != '' && this.type != '') {
-            const { data } = await axios.get(`${this.baseUrl}&type=${this.type}&s=${this.search}&page=${this.pages}`);
+          const { data } = await axios.get(`${this.baseUrl}&type=${this.type}&s=${this.search}&page=${this.pages}`);
 
-            this.getMovies = data.Search;
-            this.movieCount = data.totalResults;
+          this.getMovies = data.Search;
+          this.movieCount = data.totalResults;
+          this.response = data.Response;
         }
     },
 
