@@ -22,7 +22,7 @@ export const useMovieStore = defineStore('movie', {
 
   getters: {
     baseUrl(state) {
-      return `http://www.omdbapi.com/?apikey=${state.apiKey}`;
+      return `https://www.omdbapi.com/?apikey=${state.apiKey}`;
     },
 
     getMovieCount: (state) => state.movieCount,
